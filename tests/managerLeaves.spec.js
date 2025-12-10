@@ -24,6 +24,7 @@ test('TC-01 - Sick leave requested', async ({ page }) => {
   // Leave request flow
   await leavePage.clickRequestNewLeave();
   await leavePage.selectLeaveType();
+  await page.waitForTimeout(3000);
   await leavePage.selectDate();
   await leavePage.submitLeave();
   await page.waitForTimeout(5000);

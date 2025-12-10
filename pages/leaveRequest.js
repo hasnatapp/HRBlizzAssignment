@@ -53,7 +53,7 @@ export class LeaveRequest {
 
         // Locators
         this.requestNewLeaveBtn = page.getByRole('button', { name: 'Request new leave' });
-        this.selectDate = page.locator('[id="2025-12-04"]').getByText('4');
+        this.empSelectDate = page.locator('[id="2025-12-04"]').getByText('4');
         this.submitApproveBtn = page.locator('[data-test="submit-approve"]');
         this.primaryActionBtn = page.locator('[data-test="primary-action-button"]');
         this.alertMessage = page.getByRole('alert');
@@ -153,7 +153,7 @@ export class LeaveRequest {
     // Actions
     async requestNewLeave() {
         await this.requestNewLeaveBtn.click();
-        await this.selectDate.dblclick();
+        await this.empSelectDate.dblclick();
         await this.submitApproveBtn.click();
         await this.primaryActionBtn.click()
     }
